@@ -41,7 +41,7 @@
         <div class="hero-right">
           <!-- Logo 区域 -->
           <div class="logo-container">
-            <img src="../assets/logo/MiroFish_logo_left.jpeg" alt="MyFish Logo" class="hero-logo" />
+            <img src="../assets/logo/MYfish_logo_left.jpeg" alt="MyFish Logo" class="hero-logo" />
           </div>
           
           <button class="scroll-down-btn" @click="scrollToBottom">

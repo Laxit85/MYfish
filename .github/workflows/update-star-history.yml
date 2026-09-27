@@ -16,7 +16,7 @@ jobs:
   update-default-branch:
     if: >-
       ${{
-        github.repository == '666ghj/MiroFish' &&
+        github.repository == 'Laxit85/MYfish' &&
         github.ref_name == github.event.repository.default_branch &&
         (
           github.event_name == 'schedule' ||
@@ -34,7 +34,7 @@ jobs:
       pull-requests: write
     env:
       GIT_TERMINAL_PROMPT: '0'
-      EXPECTED_REPOSITORY: '666ghj/MiroFish'
+      EXPECTED_REPOSITORY: 'Laxit85/MYfish'
       EXPECTED_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
     steps:
       - name: Fetch triggering public commit without credentials
@@ -47,7 +47,7 @@ jobs:
           [[ "${GITHUB_REPOSITORY,,}" == "${EXPECTED_REPOSITORY,,}" ]]
           [[ "$GITHUB_REF" == "refs/heads/$EXPECTED_DEFAULT_BRANCH" ]]
           git init .
-          git remote add origin 'https://github.com/666ghj/MiroFish.git'
+          git remote add origin 'https://github.com/Laxit85/MYfish.git'
           git \
             -c credential.helper= \
             -c http.followRedirects=false \
@@ -221,8 +221,8 @@ jobs:
 
           origin="$(git remote get-url origin)"
           case "$origin" in
-            https://github.com/666ghj/MiroFish|\
-            https://github.com/666ghj/MiroFish.git) ;;
+            https://github.com/Laxit85/MYfish|\
+            https://github.com/Laxit85/MYfish.git) ;;
             *)
               echo "::error::Unexpected origin"
               exit 1
@@ -313,8 +313,8 @@ jobs:
 
           origin="$(git remote get-url origin)"
           case "$origin" in
-            https://github.com/666ghj/MiroFish|\
-            https://github.com/666ghj/MiroFish.git) ;;
+            https://github.com/Laxit85/MYfish|\
+            https://github.com/Laxit85/MYfish.git) ;;
             *)
               echo "::error::Unexpected origin"
               exit 1

@@ -70,7 +70,7 @@ def page(total, edges, has_next=False, end_cursor=None, remaining=1_000):
 def state_with_snapshots(snapshots=None):
     return {
         "schema_version": 1,
-        "repository": "666ghj/MiroFish",
+        "repository": "Laxit85/MYfish",
         "timezone": "UTC",
         "ongoing_interval_days": 13,
         "reconstruction": {
@@ -436,9 +436,13 @@ class StarHistoryBehaviorTests(unittest.TestCase):
                     star_history.load_star_count_file(path)
 
             link = root / "link"
-            link.symlink_to(valid)
-            with self.assertRaises(star_history.StarHistoryError):
-                star_history.load_star_count_file(link)
+            try:
+                link.symlink_to(valid)
+            except (OSError, NotImplementedError):
+                pass
+            else:
+                with self.assertRaises(star_history.StarHistoryError):
+                    star_history.load_star_count_file(link)
 
     def test_force_same_day_same_count_is_idempotent(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -553,7 +557,7 @@ class StarHistoryBehaviorTests(unittest.TestCase):
     def test_svg_is_accessible_self_contained_and_deterministic(self):
         state = {
             "schema_version": 1,
-            "repository": "666ghj/MiroFish",
+            "repository": "Laxit85/MYfish",
             "timezone": "UTC",
             "ongoing_interval_days": 13,
             "reconstruction": {
@@ -577,7 +581,7 @@ class StarHistoryBehaviorTests(unittest.TestCase):
         self.assertNotEqual(light, dark)
         self.assertIn(b"viewBox=\"0 0 800 533.333\"", light)
         self.assertIn(b"Star History", light)
-        self.assertIn(b"666ghj/MiroFish", light)
+        self.assertIn(b"Laxit85/MYfish", light)
         self.assertIn(b"star-history.com", light)
         self.assertIn(b"feTurbulence", light)
         self.assertIn(b"feDisplacementMap", light)
@@ -659,9 +663,9 @@ class StarHistoryBehaviorTests(unittest.TestCase):
             element.text
             for element in root.iter()
             if element.tag.rsplit("}", 1)[-1] == "text"
-            and element.text == "666ghj/MiroFish"
+            and element.text == "Laxit85/MYfish"
         ]
-        self.assertEqual(legend_labels, ["666ghj/MiroFish"])
+        self.assertEqual(legend_labels, ["Laxit85/MYfish"])
         for element in root.iter():
             for name, value in element.attrib.items():
                 local = name.rsplit("}", 1)[-1].lower()
@@ -733,7 +737,7 @@ class StarHistoryBehaviorTests(unittest.TestCase):
 
         short_window = {
             "schema_version": 1,
-            "repository": "666ghj/MiroFish",
+            "repository": "Laxit85/MYfish",
             "timezone": "UTC",
             "ongoing_interval_days": 13,
             "reconstruction": {

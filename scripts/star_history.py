@@ -29,7 +29,7 @@ from pathlib import Path
 from typing import Any, Mapping, Protocol, Sequence
 
 
-REPOSITORY = "666ghj/MiroFish"
+REPOSITORY = "Laxit85/MYfish"
 REPOSITORY_OWNER, REPOSITORY_NAME = REPOSITORY.split("/", 1)
 INTERVAL_DAYS = 13
 STATE_RELATIVE = Path(".github/star-history/history.json")
@@ -510,6 +510,8 @@ def _read_limited(path: Path, limit: int, label: str) -> bytes:
 def load_star_count_file(path: Path) -> int:
     """Read a tiny, symlink-safe decimal count produced by the fetch-only step."""
 
+    if os.path.islink(path):
+        raise StarHistoryError("Star count file is a symlink")
     flags = os.O_RDONLY
     if hasattr(os, "O_NOFOLLOW"):
         flags |= os.O_NOFOLLOW

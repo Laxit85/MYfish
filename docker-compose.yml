@@ -1,9 +1,9 @@
 services:
-  mirofish:
-    image: ghcr.io/666ghj/mirofish:latest
+  myfish:
+    image: ghcr.io/Laxit85/myfish:latest
     # 加速镜像（如拉取缓慢可替换上方地址）
-    # image: ghcr.nju.edu.cn/666ghj/mirofish:latest
-    container_name: mirofish
+    # image: ghcr.nju.edu.cn/Laxit85/myfish:latest
+    container_name: myfish
     env_file:
       - .env
     ports:

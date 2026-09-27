@@ -26,8 +26,8 @@
     "files": "个文件"
   },
   "meta": {
-    "title": "MiroFish - 预测万物",
-    "description": "MiroFish - 社交媒体舆论模拟系统"
+    "title": "MYfish - 预测万物",
+    "description": "MYfish - 社交媒体舆论模拟系统"
   },
   "nav": {
     "visitGithub": "访问我们的Github主页"
@@ -38,7 +38,7 @@
     "heroTitle1": "上传任意报告",
     "heroTitle2": "即刻推演未来",
     "heroDesc": "即使只有一段文字，{brand} 也能基于其中的现实种子，全自动生成与之对应的至多{agentScale}构成的平行世界。通过上帝视角注入变量，在复杂的群体交互中寻找动态环境下的{optimalSolution}",
-    "heroDescBrand": "MiroFish",
+    "heroDescBrand": "MYfish",
     "heroDescAgentScale": "百万级Agent",
     "heroDescOptimalSolution": "\"局部最优解\"",
     "slogan": "让未来在 Agent 群中预演，让决策在百战后胜出",
@@ -149,7 +149,7 @@
     "setupComplete": "准备完成",
     "setupCompleteDesc": "模拟环境已准备完成，可以开始运行模拟",
     "roundsConfig": "模拟轮数设定",
-    "roundsConfigDesc": "MiroFish 自动规划推演现实 {hours} 小时，每轮代表现实 {minutesPerRound} 分钟时间流逝",
+    "roundsConfigDesc": "MYfish 自动规划推演现实 {hours} 小时，每轮代表现实 {minutesPerRound} 分钟时间流逝",
     "customToggle": "自定义",
     "roundsUnit": "轮",
     "estimatedDuration": "若Agent规模为100：预计耗时约 {minutes} 分钟",
@@ -261,7 +261,7 @@
     "selectChatTarget": "选择对话对象",
     "sendSurvey": "发送问卷调查到世界中",
     "reportAgentChat": "Report Agent - Chat",
-    "reportAgentDesc": "报告生成智能体的快速对话版本，可调用 4 种专业工具，拥有MiroFish的完整记忆",
+    "reportAgentDesc": "报告生成智能体的快速对话版本，可调用 4 种专业工具，拥有MYfish的完整记忆",
     "toolInsightForge": "InsightForge 深度归因",
     "toolInsightForgeDesc": "对齐现实世界种子数据与模拟环境状态，结合Global/Local Memory机制，提供跨时空的深度归因分析",
     "toolPanoramaSearch": "PanoramaSearch 全景追踪",

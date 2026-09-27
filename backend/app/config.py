@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 
 # 加载项目根目录的 .env 文件
-# 路径: MiroFish/.env (相对于 backend/app/config.py)
+# 路径: MYfish/.env (相对于 backend/app/config.py)
 project_root_env = os.path.join(os.path.dirname(__file__), '../../.env')
 
 if os.path.exists(project_root_env):
@@ -18,7 +18,7 @@ class Config:
     """Flask配置类"""
     
     # Flask配置
-    SECRET_KEY = os.environ.get('SECRET_KEY', 'mirofish-secret-key')
+    SECRET_KEY = os.environ.get('SECRET_KEY', 'myfish-secret-key')
     DEBUG = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
     
     # JSON配置 - 禁用ASCII转义，让中文直接显示
@@ -69,7 +69,7 @@ class Config:
         if not cls.ZEP_API_KEY:
             errors.append("ZEP_API_KEY 未配置")
         if os.environ.get("ZEP_API_URL"):
-            errors.append("ZEP_API_URL 不受支持；MiroFish 仅连接 Zep Cloud")
+            errors.append("ZEP_API_URL 不受支持；MYfish 仅连接 Zep Cloud")
         if cls.DEBUG:
             import warnings
             warnings.warn("Flask DEBUG mode is enabled. Do not use in production.", RuntimeWarning)

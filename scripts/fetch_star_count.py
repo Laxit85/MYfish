@@ -15,7 +15,7 @@ import urllib.request
 from typing import Any
 
 
-REPOSITORY = "666ghj/MiroFish"
+REPOSITORY = "Laxit85/MYfish"
 API_URL = f"https://api.github.com/repos/{REPOSITORY}"
 API_VERSION = "2026-03-10"
 MAX_HTTP_BYTES = 1_000_000

@@ -89,7 +89,7 @@ class FetchStarCountTests(unittest.TestCase):
         self.assertNotIn("star_history", imported_roots)
         self.assertEqual(
             fetch_star_count.API_URL,
-            "https://api.github.com/repos/666ghj/MiroFish",
+            "https://api.github.com/repos/Laxit85/MYfish",
         )
 
     def test_success_stdout_is_only_one_decimal_count(self):
